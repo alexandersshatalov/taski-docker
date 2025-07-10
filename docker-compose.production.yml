@@ -1,6 +1,8 @@
 version: '3'
 
 volumes:
+  static_value:
+  media_value:
   pg_data:
 
 services:
@@ -27,8 +29,3 @@ services:
     image: ${{ secrets.DOCKER_USERNAME }}/taski_gateway:latest
     ports:
       - "8000:80"
-
-volumes:
-  static_value:
-  media_value:
-  pg_data:
