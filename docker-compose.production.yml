@@ -13,7 +13,7 @@ services:
       - pg_data:/var/lib/postgresql/data
 
   backend:
-    image: ${{ secrets.DOCKER_USERNAME }}/taski_backend:latest
+    image: alexandersshatalov/taski_backend:latest
     env_file: .env
     depends_on:
       - db
@@ -22,10 +22,10 @@ services:
       - media_value:/app/media/
 
   frontend:
-    image: ${{ secrets.DOCKER_USERNAME }}/taski_frontend:latest
+    image: alexandersshatalov/taski_frontend:latest
     env_file: .env
 
   gateway:
-    image: ${{ secrets.DOCKER_USERNAME }}/taski_gateway:latest
+    image: alexandersshatalov/taski_gateway:latest
     ports:
       - "8000:80"
