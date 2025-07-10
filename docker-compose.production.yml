@@ -29,3 +29,5 @@ services:
     image: alexandersshatalov/taski_gateway:latest
     ports:
       - "8000:80"
+    volumes:
+      - static_value:/usr/share/nginx/html/static/
